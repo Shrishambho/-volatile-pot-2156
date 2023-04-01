@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import com.stock.dto.CustomerDTO;
 import com.stock.dto.CustomerDTOImpl;
@@ -53,26 +54,33 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 	}
 
-	@Override
-	public List<CustomerDTO> viewCustomer() throws SomethingWentWrongException, NoRecordFoundException {
-		Connection conn=null;
-		List<CustomerDTO> list;
+	public List<CustomerDTO> getAllCustomers() throws SomethingWentWrongException, NoRecordFoundException {
+		Connection conn = null;
+		List<CustomerDTO> list=new ArrayList<>();
 		try {
-			conn=DBUtils.getConnectionTodatabase();
-			String query="SELECT id,cus_id,firstName,lastName,userName,email,password,address,mobile";
-			PreparedStatement ps=conn.prepareStatement(query);
-			ResultSet rs=ps.executeQuery();
+			//connect to database
+			conn = DBUtils.getConnectionTodatabase();
+			
+			//prepare the query
+			String SELECT_QUERY = "SELECT cus_id,firstName,lastName,userName,password,email,address,mobile from customer";
+			
+			//get the prepared statement object
+			PreparedStatement ps = conn.prepareStatement(SELECT_QUERY);
+			
+			//execute query
+			ResultSet rs = ps.executeQuery();
+			
+			//check if result set is empty
 			if(DBUtils.isResultSetEmpty(rs)) {
-				throw new NoRecordFoundException("No cutomer availables");
+				throw new NoRecordFoundException("No Customer Found");
 			}
-			list = new ArrayList<>();
+		
 			while(rs.next()) {
 				list.add(new CustomerDTOImpl(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8)));
 			}
-			
-			
+			System.out.println("I am here6");
 		}catch(ClassNotFoundException | SQLException ex) {
-			throw new SomethingWentWrongException("Customer list is empty");
+			throw new SomethingWentWrongException("Unable to show customer");
 		}finally {
 			try {
 				DBUtils.closeConnection(conn);
@@ -80,10 +88,13 @@ public class CustomerDAOImpl implements CustomerDAO {
 				
 			}
 		}
+		
 		return list;
 	}
-
-	
-	
 	
 }
+	
+	
+	
+	
+
