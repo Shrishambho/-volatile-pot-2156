@@ -75,9 +75,9 @@ public class CustomerDTOImpl implements CustomerDTO {
 	}
 	@Override
 	public String toString() {
-		return "CustomerDTOImpl [Cus_id=" + Cus_id + ", FirstName=" + FirstName + ", LastName=" + LastName
+		return "Cus_id=" + Cus_id + ", FirstName=" + FirstName + ", LastName=" + LastName
 				+ ", UserName=" + UserName + ", PassWord=" + PassWord + ", Address=" + Address + ", Mobile=" + Mobile
-				+ ", E_Mail=" + E_Mail + "]";
+				+ ", E_Mail=" + E_Mail + "";
 	}
 	
 }

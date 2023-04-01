@@ -24,12 +24,12 @@ public class UIMain {
 				System.out.println("By By Admin");
 				break;
 			case 1:
-//				StockUI.viewStock();
+				CustomerUI.viewAllCustomer();
 				break;
 			case 2:
 				StockUI.addStocks(sc);
 				break;
-				
+			
 			}
 		}while(choice!=0);
 	}
