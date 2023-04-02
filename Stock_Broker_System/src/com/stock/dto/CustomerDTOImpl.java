@@ -1,83 +1,81 @@
 package com.stock.dto;
 
-public class CustomerDTOImpl implements CustomerDTO {
+public class CustomerDTOImpl implements CustomerDTO{
 
-	private String Cus_id;
-	private String FirstName;
-	private String LastName;
-	private String UserName;
-	private String PassWord;
-	private String Address;
-	private String Mobile;
-	private String E_Mail;
-	
-	
-	
-	public CustomerDTOImpl(String Cus_id, String firstName, String lastName, String userName, String passWord, String address, String mobile,
-			String e_Mail) {
+	private String cus_id;
+	private String firstName;
+	private String lastName;
+	private String userName;
+	private String password;
+	private String email;
+	private String address;
+	private String mobile;
+	public CustomerDTOImpl(String cus_id, String firstName, String lastName, String userName, String password,
+			String email, String address, String mobile) {
 		super();
-		this.Cus_id=Cus_id;
-		this.FirstName = firstName;
-		this.LastName = lastName;
-		this.UserName = userName;
-		this.PassWord = passWord;
-		this.Address = address;
-		this.Mobile = mobile;
-		this.E_Mail = e_Mail;
+		this.cus_id = cus_id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.address = address;
+		this.mobile = mobile;
 	}
 	public String getCus_id() {
-		return Cus_id;
+		return cus_id;
 	}
 	public void setCus_id(String cus_id) {
-		Cus_id = cus_id;
+		this.cus_id = cus_id;
 	}
 	public String getFirstName() {
-		return FirstName;
+		return firstName;
 	}
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.firstName = firstName;
 	}
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 	public String getUserName() {
-		return UserName;
+		return userName;
 	}
 	public void setUserName(String userName) {
-		UserName = userName;
+		this.userName = userName;
 	}
-	public String getPassWord() {
-		return PassWord;
+	public String getPassword() {
+		return password;
 	}
-	public void setPassWord(String passWord) {
-		PassWord = passWord;
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
 	public String getMobile() {
-		return Mobile;
+		return mobile;
 	}
 	public void setMobile(String mobile) {
-		Mobile = mobile;
-	}
-	public String getE_Mail() {
-		return E_Mail;
-	}
-	public void setE_Mail(String e_Mail) {
-		E_Mail = e_Mail;
+		this.mobile = mobile;
 	}
 	@Override
 	public String toString() {
-		return "Cus_id=" + Cus_id + ", FirstName=" + FirstName + ", LastName=" + LastName
-				+ ", UserName=" + UserName + ", PassWord=" + PassWord + ", Address=" + Address + ", Mobile=" + Mobile
-				+ ", E_Mail=" + E_Mail + "";
+		return "cus_id=" + cus_id + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", userName=" + userName + ", password=" + password + ", email=" + email + ", address=" + address
+				+ ", mobile=" + mobile + "";
 	}
+	
 	
 }

@@ -8,6 +8,6 @@ public interface StockDTO {
 	public void setCom_name(String com_name);
 	public int getQuantity();
 	public void setQuantity(int quantity);
-	public long getPrice();
-	public void setPrice(long price);
+	public double getPrice();
+	public void setPrice(double price);
 }

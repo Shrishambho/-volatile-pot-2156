@@ -10,12 +10,12 @@ public interface CustomerDTO {
 	public void setLastName(String lastName);
 	public String getUserName();
 	public void setUserName(String userName);
-	public String getPassWord();
-	public void setPassWord(String passWord);
+	public String getPassword();
+	public void setPassword(String password);
+	public String getEmail();
+	public void setEmail(String email);
 	public String getAddress();
 	public void setAddress(String address);
 	public String getMobile();
 	public void setMobile(String mobile);
-	public String getE_Mail();
-	public void setE_Mail(String e_Mail);
 }

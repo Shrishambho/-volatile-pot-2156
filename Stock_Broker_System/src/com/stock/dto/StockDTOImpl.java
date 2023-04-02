@@ -1,12 +1,12 @@
 package com.stock.dto;
 
-public class StockDTOImpl implements StockDTO{
+public class StockDTOImpl implements StockDTO {
 
 	private String com_id;
-	private String com_name;
-	private int quantity ;
-	private long price;
-	public StockDTOImpl(String com_id, String com_name, int quantity, long price) {
+	private String  com_name;
+	private int quantity;
+	private double price;
+	public StockDTOImpl(String com_id, String com_name, int quantity, double price) {
 		super();
 		this.com_id = com_id;
 		this.com_name = com_name;
@@ -31,16 +31,16 @@ public class StockDTOImpl implements StockDTO{
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public long getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(long price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	@Override
 	public String toString() {
-		return "StockDTOImpl [com_id=" + com_id + ", com_name=" + com_name + ", quantity=" + quantity + ", price="
-				+ price + "]";
+		return "com_id=" + com_id + ", com_name=" + com_name + ", quantity=" + quantity + ", price="
+				+ price + "";
 	}
 	
 }

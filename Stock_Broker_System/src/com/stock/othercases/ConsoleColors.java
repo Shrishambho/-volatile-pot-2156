@@ -1,4 +1,4 @@
-package com.masai.usecases;
+package com.stock.othercases;
 
 public class ConsoleColors {
 	    public static final String RESET = "\033[0m"; // Text Reset
