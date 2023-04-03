@@ -19,6 +19,7 @@ It consist of 3 section on main menu
 
 
 2.In customer menu it consist of following section
+
 1.View Stocks                           
 2.Buy and Sells Stocks                  
 3.View Owen Transaction History         
